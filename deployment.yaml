@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: will-playground-deployment
   labels:
-    app: will-playground
+    app: wil-playground-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: will-playground
+      app: wil-playground-app
   template:
     metadata:
       labels:
-        app: will-playground
+        app: wil-playground-app
     spec:
       containers:
       - name: will-container
-        image: wil42/playground:v2
+        image: wil42/playground:v1
         ports:
         - containerPort: 8888
